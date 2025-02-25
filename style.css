@@ -1,0 +1,624 @@
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Make navbar logo smaller */
+.navbar-brand img.logo {
+    height: 30px;  /* Adjust to your preferred size */
+    width: auto;   /* Keeps the aspect ratio */
+    margin-right: 8px; /* Space between logo and text */
+}
+
+/* Add more spacing between navbar items */
+.navbar-nav .nav-item {
+    padding: 0 15px; /* Adjust the spacing as needed */
+}
+
+/* Make the navbar sticky */
+.navbar {
+    position: fixed; /* Fix it at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Keeps it above other elements */
+    background-color: black; /* Ensures it stays visible */
+    padding: 15px 0; /* Keeps padding for a balanced look */
+}
+
+/* Add space at the top of the page so content doesn't hide behind navbar */
+body {
+    padding-top: 70px; /* Adjust based on navbar height */
+}
+/* Hero Section with Background Image */
+.hero {
+    height: 100vh; /* Full-screen height */
+    background: url('images/IMG_8174.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Ensures text is readable */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Adds contrast for readability */
+}
+
+/* Ensure the header text is centered and visible */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Optional: Add a dark overlay for better contrast */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust for more/less darkness */
+    z-index: 1;
+}
+/* Light 3D Text Effect with Reduced Glow */
+.hero h1 {
+    font-family: 'Montserrat', sans-serif; /* Clean, bold font */
+    font-size: 4rem; /* Adjust for desired size */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Slight spacing for a premium look */
+
+    /* Subtle 3D Shadow Effect */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6),
+                 4px 4px 6px rgba(255, 255, 255, 0.4);
+
+    /* Light Gradient for Depth */
+    background: linear-gradient(135deg, #ffffff, #f5f5f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* About Me Section */
+#about {
+    background-color: #F8F9FA; /* Light background */
+    padding: 60px 0; /* Add space for better layout */
+
+}
+
+/* About Me Heading */
+.about-heading {
+    font-family: 'Montserrat', sans-serif; /* Matches hero section */
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #444444; /* Light off-white */
+    margin-bottom: 40px;
+}
+
+/* Circular Logo */
+.about-logo {
+    width: 180px; /* Adjust as needed */
+    height: 180px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover;
+}
+
+/* About Text */
+.about-text {
+    font-family: 'Montserrat', sans-serif; /* Match hero section */
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 80px 0;
+    background-color: #F8F9FA; /* Light grey background */
+}
+
+/* Testimonial Heading */
+.testimonial-heading {
+    font-family: 'Montserrat', sans-serif; /* Matches hero section */
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #444444; /* Light off-white */
+    margin-bottom: 40px;
+
+}
+
+/* Testimonial Text */
+.testimonial-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Testimonial Author */
+.testimonial-author {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Center carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1); /* Makes the arrows visible on light backgrounds */
+}
+
+#contact {
+    padding: 80px 0;
+    background-color: #F8F9FA; /* Light grey background */
+}
+
+/* Contact Me Heading */
+#contact h2 {
+    font-family: 'Montserrat', sans-serif; /* Matches hero section */
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #444444; /* Light off-white */
+    margin-bottom: 40px;
+}
+
+
+/* Contact Form Styling */
+#contact form {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Placeholder Text Color */
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: #444444;
+}
+
+/* Submit Button */
+#contact button {
+    background-color: #F8F9FA;
+    color: black;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #EAEAEA;
+    color: black;
+}
+
+#contact input,
+#contact textarea {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    color: #444444;
+    border: 2px solid #777; /* Grey border */
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+/* Hover & Focus Effects */
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #444444; /* Lighter grey on focus */
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Production Section */
+#production-content {
+    background-color: #F8F9FA;
+    padding: 80px 0;
+}
+
+/* Section Headings */
+.production-heading, .spotify-heading {
+    font-family: 'Montserrat', sans-serif; /* Matches hero section */
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #444444; /* Light off-white */
+    margin-bottom: 40px;
+}
+
+/* Production Description */
+.production-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* FAQ Section Styling */
+.faq-intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.faq-heading {
+    font-family: 'Montserrat', sans-serif; /* Matches hero section */
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #444444; /* Light off-white */
+    margin-bottom: 40px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #222;
+}
+
+.faq-icon {
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 16px;
+    margin-top: 5px;
+    color: #555;
+    padding-left: 5px;
+}
+
+/* Toggle Effect */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact-form .form-label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Soundwave Animation */
+.soundwave {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    height: 50px;
+}
+
+.soundwave span {
+    display: block;
+    width: 6px;
+    height: 10px;
+    background: #007bff;
+    border-radius: 3px;
+    transition: height 0.3s;
+}
+
+/* Active Soundwave Animation */
+.soundwave.active span:nth-child(1) {
+    animation: bounce 1s infinite ease-in-out;
+}
+
+.soundwave.active span:nth-child(2) {
+    animation: bounce 1s infinite ease-in-out 0.2s;
+}
+
+.soundwave.active span:nth-child(3) {
+    animation: bounce 1s infinite ease-in-out 0.4s;
+}
+
+.soundwave.active span:nth-child(4) {
+    animation: bounce 1s infinite ease-in-out 0.6s;
+}
+
+.soundwave.active span:nth-child(5) {
+    animation: bounce 1s infinite ease-in-out 0.8s;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 100% {
+        height: 10px;
+    }
+    50% {
+        height: 30px;
+    }
+}
+
+/* MP3 Player Container */
+.mp3-player {
+    width: 250px;
+    background: #111;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Click Wheel Controls */
+.mp3-controls {
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    border-radius: 50%;
+    padding: 10px;
+    width: 120px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Control Buttons */
+.control-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+}
+
+/* MP3 Player Container */
+.mp3-player {
+    width: 350px;
+    background: #111;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Track Video */
+#track-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Hidden until music plays */
+    border-radius: 12px;
+}
+
+/* Track Title */
+#track-title {
+    position: absolute;
+    bottom: 10px;
+    color: #40E59F;
+    font-size: 16px;
+    font-family: "Courier New", monospace;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Click Wheel Controls */
+.mp3-controls {
+    display: flex;
+    justify-content: space-around;
+    background: black;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Control Buttons */
+.control-btn {
+    background: #222;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s;
+    border-radius: 8px;
+}
+
+.control-btn:hover {
+    background: #40E59F;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Tracklist */
+.mp3-tracklist {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.mp3-track {
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 0;
+    transition: color 0.2s ease-in-out;
+}
+
+.mp3-track:hover {
+    color: #40E59F;
+}
+
+/* Highlight Playing Track */
+.mp3-track.active {
+    color: #40E59F;
+    font-weight: bold;
+}
+
+
+
+/* MP3 Player Container */
+.mp3-player {
+    width: 350px;
+    background: #111;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* MP3 Screen (Ensure the video is visible) */
+.mp3-screen {
+    width: 100%;
+    height: 180px;
+    background: #222;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Track Video (Ensure it's displayed correctly) */
+#track-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block; /* Ensure it's visible */
+}
+
+/* Play Button with PNG */
+#play-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden; /* Ensures image fits within the rounded border */
+    width: 50px; /* Adjust as needed */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Play/Pause Icon */
+#play-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures it fills the button */
+    border-radius: 50%; /* Ensures the image itself is round */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+#play-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for All Control Buttons */
+.control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%; /* Makes all buttons circular */
+    overflow: hidden;
+    width: 50px; /* Same size for all buttons */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for All Button Images */
+.control-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the button */
+    border-radius: 50%; /* Ensures images are circular */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect for Buttons */
+.control-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
